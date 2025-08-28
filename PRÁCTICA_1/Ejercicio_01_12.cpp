@@ -2,7 +2,7 @@
 // Autor: Belen Manrrique Mamani
 // Carnet: 9978843 L.P.
 // Carrera del estudiante: Ingeniería Industrial
-// Fecha creación: 24/08/2025
+// Fecha creación: 28/08/2025
 // Número de ejercicio: 12
 #include <iostream>
 using namespace std;
@@ -16,7 +16,7 @@ int main()
         cin >> numero;
         if (numero < 1 || numero > 5) 
         {
-            cout << "El número ingresado es inválido. Intente de nuevo" << endl;
+            cout << "El número ingresado es inválido. Ingrese otro valor" << endl;
         }
     } 
     while (numero < 1 || numero > 5);
