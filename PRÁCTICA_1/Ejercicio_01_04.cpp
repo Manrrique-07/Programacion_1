@@ -3,7 +3,7 @@
 // Carnet: 9978843 L.P.
 // Carrera del estudiante: Ingeniería Industrial
 // Fecha creación: 24/08/2025
-// Número de ejercicio: 1
+// Número de ejercicio: 4
 #include <iostream>
 using namespace std;
 int main ()

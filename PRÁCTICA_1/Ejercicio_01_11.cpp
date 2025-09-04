@@ -2,7 +2,7 @@
 // Autor: Belen Manrrique Mamani
 // Carnet: 9978843 L.P.
 // Carrera del estudiante: Ingeniería Industrial
-// Fecha creación: 24/08/2025
+// Fecha creación: 28/08/2025
 // Número de ejercicio: 11
 #include <iostream>
 using namespace std;
@@ -26,7 +26,7 @@ int main()
         case 10: cout << "Octubre" << endl; break;
         case 11: cout << "Noviembre" << endl; break;
         case 12: cout << "Diciembre" << endl; break;
-        default: cout << "Mes invalido." << endl; break;
+        default: cout << "Número invalido." << endl; break;
     }
     return 0;
 }
