@@ -18,6 +18,7 @@ bool esPrimo(int n)
 
 int main() 
 {
+    system("chcp 65001");
     int num;
     cout << "Ingrese un número entero: ";
     cin >> num;

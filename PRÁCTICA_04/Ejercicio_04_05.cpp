@@ -7,28 +7,40 @@
 #include <iostream>
 using namespace std;
 
-int main() 
-{
+#include <iostream>
+using namespace std;
+double CalcularSalario(double horasTrabajadas, double tarifaHora, double &bonificacion) {
+    const double HORAS_MIN = 8;
+    double salario = 0;
+    bonificacion = 0;
+
+    if (horasTrabajadas > HORAS_MIN) {
+        double horasExtra = horasTrabajadas - HORAS_MIN;
+        salario = HORAS_MIN * tarifaHora;
+        bonificacion = horasExtra * tarifaHora * 1.5;  
+        salario += bonificacion;
+    } else {
+        salario = horasTrabajadas * tarifaHora;
+    }
+
+    return salario;
+}
+
+int main() {
     double horas, tarifa, bonificacion;
+    
     cout << "Ingrese las horas trabajadas: ";
     cin >> horas;
     cout << "Ingrese la tarifa por hora: ";
     cin >> tarifa;
-    cout << "Ingrese la bonificación por hora extra: ";
-    cin >> bonificacion;
 
-    double salario, extra = 0;
+    double salarioTotal = CalcularSalario(horas, tarifa, bonificacion);
 
-    if (horas > 8) {
-        salario = 8 * tarifa;
-        extra = (horas - 8) * (tarifa + bonificacion);
-    } else {
-        salario = horas * tarifa;
-    }
-
-    cout << "Salario del trabajador: " << salario << endl;
-    cout << "Salario por bonificación: " << extra << endl;
-    cout << "Salario total: " << salario + extra << endl;
+    cout << "Salario del trabajador: " << salarioTotal << endl;
+    if (bonificacion > 0)
+        cout << "Bonificación por horas extra: " << bonificacion << endl;
+    else
+        cout << "No tiene bonificación por horas extra." << endl;
 
     return 0;
 }
